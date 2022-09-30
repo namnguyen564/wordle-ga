@@ -1,6 +1,6 @@
 //GAMEWORD
 let gameWord = "BUILD"
-
+let guessone = []
 
 //list out all keys/characters to use in a for loop to create a button for each
 letters = [
@@ -27,9 +27,3 @@ const gameRow = [
 ]
 
 
-const guessone = []
-guess2 = [""]
-guess3 = [""]
-guess4 = [""]
-guess5 = [""]
-guess6 = [""]

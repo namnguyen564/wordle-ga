@@ -29,20 +29,22 @@ for(let letter of letters){
 }
 function checkGuess(){
     if(currentbox == 5){
-        const guess = guessone.join("")
+        let guess = guessone.join("")
         console.log(guess)
         if (guess == gameWord){
             alert("CORRECT WORD!")
-         }else{
-            alert("INCORRECT WORD!")
-         }
+                 }else if(currentrow < 5){
+                    currentrow++
+                    currentbox = 0
+                    guessone = []
+                 }
+            }
+        }
+        
+function resetGuess(){
+    if(currentbox == 5 && guess != gameWord){
+        guessone = []
     }
 }
 
-
-    function alertanswer(){
-        if (guess == gameWord){
-            alert("CORRECT WORD!")
-         }
-    }
 
