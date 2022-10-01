@@ -1,6 +1,7 @@
 //GAMEWORD
 let gameWord = "BUILD"
 let guessone = []
+let tries = 0
 
 //list out all keys/characters to use in a for loop to create a button for each
 letters = [
@@ -14,8 +15,6 @@ let boxlayout = document.getElementById("boxlayout")
 currentrow = 0
 currentbox = 0
 
-
-
 // create an object to contain assume position and ID of the character
 const gameRow = [
     ["", "", "", "", "",],
@@ -25,5 +24,4 @@ const gameRow = [
     ["", "", "", "", "",],
     ["", "", "", "", "",],
 ]
-
 
