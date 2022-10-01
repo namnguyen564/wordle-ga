@@ -1,61 +1,73 @@
 
 
-for(let i = 0; i < 6; i++){
+for (let i = 0; i < 6; i++) {
     let boxrow = document.createElement("div")
-    for(rowIndex of gameRow){
-    boxrow.setAttribute("id", "row:" + i)
+    for (rowIndex of gameRow) {
+        boxrow.setAttribute("id", "row:" + i)
     }
-    
-        for (let e = 0; e < 5; e++){
-            let box = document.createElement("div")
-            box.className = "boxclass"
-            boxrow.appendChild(box)
-        
-            for(boxIndex of gameRow){
-                box.setAttribute("id","row:" + i + " box:" + e)
-              
+
+    for (let e = 0; e < 5; e++) {
+        let box = document.createElement("div")
+        box.className = "boxclass"
+        boxrow.appendChild(box)
+
+        for (boxIndex of gameRow) {
+            box.setAttribute("id", "row:" + i + " box:" + e)
+
         }
     }
     boxlayout.appendChild(boxrow)
 }
 
-for(let letter of letters){
+for (let letter of letters) {
     const buttonElement = document.createElement("button")
     buttonElement.textContent = letter
     document.getElementById("keyboardgrid").appendChild(buttonElement)
     buttonElement.setAttribute("id", letter)
     buttonElement.addEventListener("click", () => handleclick(letter))
 }
-function checkGuess(){
-    if(currentbox == 5){
-        let guess = guessone.join("")
+function checkGuess() {
+    if (currentbox == 5) {
+        let guess = currentGuess.join("")
         console.log(guess)
-        
-        if (guess == gameWord){
-            alert("CORRECT WORD!")
-                 }else if(currentrow < 6){
-                    currentrow++
-                    currentbox = 0
-                    guessone = []
-                    tries++
-                    // console.log("tries", tries)
-                    // }else if(tries == 6){
-                    //     alertLoss()
+        for (let i = 0; i < 5; i++) {
+            const guessLetter = currentGuess[i]
+            const gameLetter = gameWord[i]
+            if (guessLetter == gameLetter) {
+                alert("Perfect Letter Match")
             }
+            
+        }
+        // document.getElementById(elementId).classList.add(‘match')
+        // .match { background-color: lime}
+
+
+
+        if (guess == gameWord) {
+            alert("CORRECT WORD!")
+        } else if (currentrow < 6) {
+            currentrow++
+            currentbox = 0
+            currentGuess = []
+            tries++
+
+        }
+        if (tries == 6) {
+            alertLoss()
         }
     }
+}
 
 
-    if(tries == 6){
-     alertLoss()
-    }
+// if (tries == 6) {
+//     alertLoss()
+// }
 
-function alertLoss(){
+function alertLoss() {
     alert("GAMEOVER")
     console.log("what")
     return
 }
 
 
-    
 

@@ -1,6 +1,6 @@
 //GAMEWORD
 let gameWord = "BUILD"
-let guessone = []
+let currentGuess = []
 let tries = 0
 
 //list out all keys/characters to use in a for loop to create a button for each
