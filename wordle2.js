@@ -35,13 +35,19 @@ function checkGuess() {
         for (let i = 0; i < 5; i++) {
             const guessLetter = currentGuess[i]
             const gameLetter = gameWord[i]
+            
+            
             if (guessLetter == gameLetter) {
                 console.log("letter is in the right position")
                 document.getElementById("row:" + currentrow + " box:" + l).classList.add("greenoverlay")
-                l++
+          
                 console.log(currentrow)
+            // }else if(guessLetter.includes(gameLetter)){
+            //     document.getElementById("row:" + currentrow + " box:" + l).classList.add("yellowoverlay")
+            //     console.log("letter is in word")
+               
             }
-            
+            l++
         }
         // document.getElementById(elementId).classList.add(‘match')
         // .match { background-color: lime}

@@ -39,7 +39,11 @@ body
     
 }
 
-.greenoverlay {
-    background-color: greenyellow;
+.boxclass.greenoverlay {
+    background-color: rgb(47, 180, 56);
+}
+
+.boxclass.yellowoverlay {
+    background-color: rgb(225, 255, 0);
 }
 
