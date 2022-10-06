@@ -35,17 +35,19 @@ function checkGuess() {
         for (let i = 0; i < 5; i++) {
             const guessLetter = currentGuess[i]
             const gameLetter = gameWord[i]
-            
+            boxes = document.getElementById("row:" + currentrow + " box:" + l)
             
             if (guessLetter == gameLetter) {
-                console.log("letter is in the right position")
-                document.getElementById("row:" + currentrow + " box:" + l).classList.add("greenoverlay")
-          
+                console.log("letter is in the right position of gameword")
+                boxes.classList.add("greenoverlay")
                 console.log(currentrow)
-            // }else if(guessLetter.includes(gameLetter)){
-            //     document.getElementById("row:" + currentrow + " box:" + l).classList.add("yellowoverlay")
-            //     console.log("letter is in word")
-               
+                console.log(l)
+            }else if(gameWord.includes(guessLetter)){
+               boxes.classList.add("yellowoverlay")
+                console.log("letter is in gameword")
+            }else{
+                boxes.classList.add("greyoverlay")
+                console.log("letter not in gameword")
             }
             l++
         }
