@@ -1,5 +1,4 @@
 
-
 for (let i = 0; i < 6; i++) {
     let boxrow = document.createElement("div")
     for (rowIndex of gameRow) {
@@ -27,14 +26,20 @@ for (let letter of letters) {
     buttonElement.addEventListener("click", () => handleclick(letter))
 }
 function checkGuess() {
+    let l = 0
     if (currentbox == 5) {
         let guess = currentGuess.join("")
         console.log(guess)
+
+
         for (let i = 0; i < 5; i++) {
             const guessLetter = currentGuess[i]
             const gameLetter = gameWord[i]
             if (guessLetter == gameLetter) {
-                alert("Perfect Letter Match")
+                console.log("letter is in the right position")
+                document.getElementById("row:" + currentrow + " box:" + l).classList.add("greenoverlay")
+                l++
+                console.log(currentrow)
             }
             
         }
@@ -68,6 +73,3 @@ function alertLoss() {
     console.log("what")
     return
 }
-
-
-
