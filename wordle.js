@@ -1,11 +1,11 @@
 function handleclick(letter) {
     if (letter == "<" && currentbox > 0) {
+        currentbox--
         const boxLetter = document.getElementById("row:" + currentrow + " box:" + currentbox)
         boxLetter.textContent = ""
         gameRow[currentrow][currentbox] = ""
-        currentbox--
+      
         console.log(gameRow)
-        console.log("hello")
         currentGuess.pop(letter)
     } 
     if (letter == "ENTER") {
@@ -15,6 +15,7 @@ function handleclick(letter) {
         addCharacter(letter)
         currentGuess.push(letter)
         console.log(currentGuess)
+        console.log(currentbox)
         }
     }
 }
@@ -27,7 +28,6 @@ function addCharacter(letter) {
         const boxLetter = document.getElementById("row:" + currentrow + " box:" + currentbox)
         boxLetter.textContent = letter
         gameRow[currentrow][currentbox] = letter
-        boxLetter.setAttribute("data-num", letter)
         currentbox++
         console.log("boxRow", gameRow)
     }

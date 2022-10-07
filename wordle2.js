@@ -51,13 +51,12 @@ function checkGuess() {
             }
             l++
         }
-        // document.getElementById(elementId).classList.add(‘match')
-        // .match { background-color: lime}
-
-
+  
 
         if (guess == gameWord) {
-            alert("CORRECT WORD!")
+            // alert("CORRECT WORD!")
+            document.getElementById("win").innerHTML = "You Guessed Right!"
+            
         } else if (currentrow < 6) {
             currentrow++
             currentbox = 0
@@ -70,11 +69,6 @@ function checkGuess() {
         }
     }
 }
-
-
-// if (tries == 6) {
-//     alertLoss()
-// }
 
 function alertLoss() {
     alert("GAMEOVER")

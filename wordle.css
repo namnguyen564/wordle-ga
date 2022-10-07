@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:ital,wght@0,300;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,400&display=swap');
-
+*{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
 h1{
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
+    position: relative; top: -15px;
+
 }
 
 #boxlayout{
-    margin:auto
+    margin:auto;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    position: relative; top: -32px;
     
 }
 
@@ -15,26 +24,39 @@ body, html {
     text-align: center;
 }
 
-body
+
 
 .boxclass {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 1px solid rgb(0, 0, 0);
     display: inline-block;
+    justify-content: center;
     background-color: rgb(125, 158, 158);
     border-color: rgb(248, 183, 104);
-    
-    margin:10px
+    margin:4px;
+    vertical-align: top;
+    overflow: auto;
+}
+
+#win{
+    margin-bottom: 20px;
+    position: relative; top: -25px;
+   
+}
+
+#keyboardgrid{
+    max-width: 61%;
+    /* max-height: 60%; */
+    margin:auto;
 }
 
 #keyboardgrid button{
-    width: 70px;
+    width: 78px;
     height: 60px;
     border-radius: 4px;
-    background-color: rgba(93, 93, 93, 0.573);
-    margin: 8px;
-    max-width: 60%;
+    margin: 4px;
+    /* max-width: 60%; */
     background-color: rgb(233, 207, 173);
     
 }

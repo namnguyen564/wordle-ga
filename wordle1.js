@@ -1,5 +1,5 @@
 //GAMEWORD
-let gameWord = "BUILD"
+let gameWord = "RATIO"
 let currentGuess = []
 let tries = 0
 
