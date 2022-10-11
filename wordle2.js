@@ -65,7 +65,7 @@ function checkGuess() {
 
         }
         if (tries == 6) {
-            alertLoss()
+            document.getElementById("win").innerHTML = "Game Over!"
         }
     }
 }
