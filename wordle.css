@@ -141,7 +141,7 @@
 
 .wrapper {
   text-align: center;
-  position: relative; /* added to make .modal position absolute to this container */
+  position: relative;
 }
 
 .modal {
