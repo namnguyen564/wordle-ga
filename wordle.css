@@ -1,17 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:ital,wght@0,300;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=Righteous&family=Teko:wght@500&display=swap");
-* {
-  /* font-family: 'Poppins', sans-serif; */
-  /* font-size: 20px; */
-}
-h1 {
+
+.title {
+  display: inline-block;
+  margin: 0;
   font-family: "Bebas Neue", cursive;
   font-size: 70px;
-  position: relative;
-
-  margin: auto;
-  justify-content: center;
-  display: flex;
+  vertical-align: middle;
+  padding-right: 60px;
 }
 
 #boxlayout {
@@ -57,7 +53,7 @@ h1 {
   justify-items: center;
   align-items: center;
   margin: auto;
-  width: 30%;
+  width: 50%;
   /* border: 1px solid black; */
   padding: 10px;
 }
@@ -121,4 +117,66 @@ h1 {
 
 .boxclass.greyoverlay {
   background-color: rgb(165, 165, 165);
+}
+
+#green {
+  color: rgb(111, 255, 121);
+}
+
+#yellow {
+  color: rgb(235, 232, 51);
+}
+
+#grey {
+  color: rgb(126, 126, 126);
+}
+
+.question {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 40px;
+}
+
+.wrapper {
+  text-align: center;
+  position: relative; /* added to make .modal position absolute to this container */
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  width: 20%;
+  height: 400px;
+  left: 18%;
+  top: 280px;
+  /* top: 50%; */
+  /* right: 80px; */
+  /* left: 80%; */
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #000000;
+}
+#howto {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  position: relative;
+  bottom: 25px;
+}
+
+.list {
+  font-family: "Bebas Neue", cursive;
+  padding: 10px;
+  font-size: 20px;
+  padding-right: 40px;
+}
+
+.listbox {
+  position: relative;
+  bottom: 50px;
+}
+.question:hover + .modal {
+  display: block;
 }
