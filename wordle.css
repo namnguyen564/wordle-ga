@@ -52,10 +52,14 @@
   grid-gap: 5px;
   justify-items: center;
   align-items: center;
-  margin: auto;
-  width: 50%;
-  /* border: 1px solid black; */
+  width: 700px;
   padding: 10px;
+}
+
+.keycontainer {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
 }
 
 #keyboardgrid button {
