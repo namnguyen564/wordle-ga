@@ -2314,7 +2314,7 @@ let randomWords = [
 let randomElement = randomWords[Math.floor(Math.random() * randomWords.length)];
 
 let gameWord = randomElement.toUpperCase();
-console.log(gameWord);
+
 let currentGuess = [];
 let tries = 0;
 
