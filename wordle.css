@@ -1,76 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:ital,wght@0,300;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,400&display=swap');
-*{
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:ital,wght@0,300;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=Righteous&family=Teko:wght@500&display=swap");
+* {
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-size: 20px; */
 }
-h1{
-    font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    position: relative; top: -15px;
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 70px;
+  position: relative;
 
-}
-
-#boxlayout{
-    margin:auto;
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    position: relative; top: -32px;
-    
+  margin: auto;
+  justify-content: center;
+  display: flex;
 }
 
-body, html {
-    background-color: rgb(180, 201, 194);
-    text-align: center;
+#boxlayout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 450px; /* adjust this to fit all boxes in a row */
+  margin: auto;
 }
-
-
 
 .boxclass {
-    width: 60px;
-    height: 60px;
-    border: 1px solid rgb(0, 0, 0);
-    display: inline-block;
-    justify-content: center;
-    background-color: rgb(125, 158, 158);
-    border-color: rgb(248, 183, 104);
-    margin:4px;
-    vertical-align: top;
-    overflow: auto;
+  font-family: "Bebas Neue", cursive;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  margin: 4px;
+  vertical-align: top;
+  overflow: auto;
+  text-align: center;
+  line-height: 60px;
+  border: 3px solid black; /* Add this line */
+  font-size: 30px;
 }
 
-#win{
-    margin-bottom: 20px;
-    position: relative; top: -25px;
-   
+#win {
+  margin-bottom: 20px;
+  /* position: relative;
+  top: -25px; */
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  margin: auto;
+  justify-content: center;
+  display: flex;
 }
 
-#keyboardgrid{
-    max-width: 61%;
-    /* max-height: 60%; */
-    margin:auto;
+#keyboardgrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 5px;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+  /* border: 1px solid black; */
+  padding: 10px;
 }
 
-#keyboardgrid button{
-    width: 78px;
-    height: 60px;
-    border-radius: 4px;
-    margin: 4px;
-    /* max-width: 60%; */
-    background-color: rgb(233, 207, 173);
-    
+#keyboardgrid button {
+  font-size: 16px;
+  border: none;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(223, 223, 223);
+  /* border: 1px solid black; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keyboardgrid button:hover {
+  background-color: #f1f1f1;
+}
+
+#keyboardgrid button:nth-child(29) {
+  grid-column: 1 / span 2;
+}
+
+#keyboardgrid button:nth-child(30) {
+  grid-column: 3 / span 2;
+}
+
+#keyboardgrid button:nth-child(31) {
+  grid-column: 5 / span 2;
+}
+
+#keyboardgrid button:nth-child(32) {
+  grid-column: 7 / span 2;
+}
+
+#keyboardgrid button:nth-child(33) {
+  grid-column: 9 / span 2;
+}
+
+#playAgain {
+  width: 60%;
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  background-color: rgb(255, 188, 188);
+  margin-top: 20px;
 }
 
 .boxclass.greenoverlay {
-    background-color: rgb(47, 180, 56);
+  background-color: rgb(142, 255, 149);
 }
 
 .boxclass.yellowoverlay {
-    background-color: rgb(225, 255, 0);
+  background-color: rgb(239, 255, 121);
 }
 
 .boxclass.greyoverlay {
-    background-color: rgb(110, 110, 109);
+  background-color: rgb(165, 165, 165);
 }
-
-
